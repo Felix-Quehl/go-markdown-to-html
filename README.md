@@ -7,6 +7,8 @@ So it is what it is, not more and not less.
 Its should be somewhat intuitive to understand how its works when you look at the config, templates and the example markdown.
 Or at leased that what i am telling myself to not write documentation.
 
+Just put your files into the `_content` directory and run the scripts:
+
 ```bash
 # build
 ./build.sh
