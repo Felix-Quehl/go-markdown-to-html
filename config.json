@@ -1,0 +1,6 @@
+{
+    "TemplateIndex": "./_templates/index.html",
+    "TemplatePage": "./_templates/page.html",
+    "Input": "./_content",
+    "Output": "./_public"
+}

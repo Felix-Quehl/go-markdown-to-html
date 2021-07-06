@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/examples/album/album.css">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+    <title>{{.Title}} - quehl.xzy</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 75%;
+        }
+    </style>
+
+</head>
+
+<body lang=" en">
+
+
+
+    <main role="main">
+        <div class="page-header  text-center">
+            <h1>quehl <small>xyz</small></h1>
+
+        </div>
+        <div class=" album py-5 bg-light">
+            <div class="container">
+                <div class="row  mb-4">
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-outline-dark btn-lg btn-block" onclick="history.back()">
+                            Back
+                        </button>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-body">
+                                <h2>{{.Title}}<br><small>{{.Date}}</small></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    {{range .Authors}}
+                    <div class="col mb-4">
+                        <div class="card box-shadow">
+                            <div class="card-body">
+                                <p class="card-text font-weight-bold">
+                                    <small class="text-muted">Author:</small><br> {{.Name}}<br>
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-muted">Mail:</small><br>{{.Mail}}<br>
+                                    <small class="text-muted">Organization:</small><br>{{.Organization}}<br>
+                                    <small class="text-muted">ORCID:</small><br>{{.ORCID}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {{end}}
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <div class="card box-shadow">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    {{.Content}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+</body>
+
+</html>
